@@ -2,7 +2,8 @@
   defaultBranch = main
   templatedir = ~/.git_template
 [user]
-  name = notjustinshaw
+	name = Justin Shaw
+	email = realjustinshaw@gmail.com
 [push]
   default = current
 [color]
