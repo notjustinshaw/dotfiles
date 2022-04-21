@@ -7,6 +7,14 @@ alias v="$VISUAL"
 alias cler="clear"
 alias clar="clear"
 
+# git
+alias ga="git add --all"
+alias gp="git push"
+
+gc() {
+  git commit -m "$*"
+}
+
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
