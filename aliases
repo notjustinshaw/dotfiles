@@ -6,6 +6,7 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 alias cler="clear"
 alias clar="clear"
+alias c="clear"
 
 # git
 alias ga="git add --all"
