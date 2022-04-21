@@ -1,4 +1,3 @@
---regex-ruby=/(^|[:;])[ \t]*([A-Z][[:alnum:]_]+) *=/\2/c,class,constant/
 --exclude=bower_components
 --exclude=node_modules
 --exclude=vendor
