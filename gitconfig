@@ -8,6 +8,8 @@
   default = current
 [color]
   ui = auto
+[pretty]
+  colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
 [alias]
   aa = add --all
   ap = add --patch
