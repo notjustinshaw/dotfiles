@@ -19,6 +19,11 @@ gc() {
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
+# Include extract script
+if [[ -f ~/.dotfiles/extract ]]; then
+  source ~/.dotfiles/extract
+fi
+
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
   source ~/.aliases.local
