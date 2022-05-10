@@ -1,12 +1,39 @@
 # Unix
-alias ll="ls -al"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
+alias ls='ls -Gp'
+alias l='ls'
+alias ll='ls -a'
+alias grep='grep --color'
+alias cd='cd -P'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
 alias e="$EDITOR"
 alias v="$VISUAL"
+
+# ls after cd
+function cd() {
+    builtin cd "$@";
+    # For environment stuff
+    if [[ -e ".env" ]]
+    then
+        source .env
+    fi
+    ls;
+}
+
+# because spelling is hard
 alias cler="clear"
 alias clar="clear"
 alias c="clear"
+
+# moving around
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .2='cd ../..'                         # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'
 
 # git
 alias ga="git add --all"
@@ -14,6 +41,27 @@ alias gp="git push"
 
 gc() {
   git commit -m "$*"
+}
+
+extract () {
+    if [ -f $1 ] ; then
+      case $1 in
+        *.tar.bz2)   tar xjf $1     ;;
+        *.tar.gz)    tar xzf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      ;;
+        *.tbz2)      tar xjf $1     ;;
+        *.tgz)       tar xzf $1     ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 # Pretty print the path
