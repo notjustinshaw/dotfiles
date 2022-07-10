@@ -53,14 +53,22 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+
+## custom git overrides
+#
+# must come after `plugins=(git)`
+unalias gc
 gc() {
   git commit -m "$*"
 }
 
+# No arguments: `git status`
+# With arguments: acts like `git`
+unalias g
 g() {
-  git add . && git commit -m "$*"
-}
-
-push() {
-  git push
+  if [[ $# -gt 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
 }
