@@ -42,7 +42,6 @@ _load_settings "$HOME/.zsh/configs"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 ## oh my zsh
 #
 # Path to your oh-my-zsh installation.
@@ -53,3 +52,15 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+gc() {
+  git commit -m "$*"
+}
+
+g() {
+  git add . && git commit -m "$*"
+}
+
+push() {
+  git push
+}
