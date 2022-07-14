@@ -1,5 +1,6 @@
 # give us access to ^Q
-stty -ixon
+# see: https://stackoverflow.com/a/31155446/12849203
+[[ $- == *i* ]] && stty -ixon
 
 # vi mode
 bindkey -v
