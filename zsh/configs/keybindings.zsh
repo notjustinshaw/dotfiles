@@ -1,7 +1,3 @@
-# give us access to ^Q
-# see: https://stackoverflow.com/a/31155446/12849203
-[[ $- == *i* ]] && stty -ixon
-
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
