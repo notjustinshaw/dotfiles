@@ -35,6 +35,9 @@ alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'
 
+# languages
+alias py='python3'
+
 # git
 alias ga="git add --all"
 alias gp="git push"
