@@ -54,6 +54,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# LaTeX
+export PATH="$PATH:/usr/local/bin:/usr/local/texlive/2023/texmf-dist/scripts/texlive/"
+
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
