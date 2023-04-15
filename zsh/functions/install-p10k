@@ -3,7 +3,7 @@ _install-p10k() {
   mkdir -p $HOME/.local/share/fonts
 
   # copy font files into that directory
-  cp --no-clobber $HOME/.dotfiles/zsh/p10k-fonts/*ttf $HOME/.local/share/fonts/
+  cp -n $HOME/.dotfiles/zsh/p10k-fonts/*ttf $HOME/.local/share/fonts/
 
   # refresh fonts cache
   fc-cache -f
