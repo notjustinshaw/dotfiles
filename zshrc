@@ -56,30 +56,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # LaTeX
 export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/usr/local/texlive/2023/bin/x86_64-linux"
+export PATH="/Library/TeX/texbin:$PATH"
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
-## custom git overrides
-#
-# must come after `plugins=(git)`
-unalias gc
-gc() {
-  git commit -m "$*"
-}
-
-# No arguments: `git status`
-# With arguments: acts like `git`
-unalias g
-g() {
-  if [[ $# -gt 0 ]]; then
-    git "$@"
-  else
-    git status
-  fi
-}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -89,3 +70,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/justin/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/justin/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/justin/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/justin/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
