@@ -4,7 +4,6 @@ alias l='ls'
 alias ll='ls -a'
 alias grep='grep --color'
 alias cd='cd -P'
-alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias e="$EDITOR"
