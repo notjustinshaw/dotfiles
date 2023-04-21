@@ -9,6 +9,9 @@ alias mkdir='mkdir -pv'
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+# nodejs
+alias dev="npm run dev"
+
 # ls after cd
 function cd() {
     builtin cd "$@";
