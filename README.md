@@ -13,18 +13,13 @@ Upgrade packages
 
     sudo apt upgrade -y     # get coffee here
 
+Copy your keys from Github
 
-
-
-Requirements
-------------
+    vim ~/.ssh/id_ed25519    # copy keys over (or make new keys)
 
 Set zsh as your login shell:
 
     chsh -s $(which zsh)
-
-Install
--------
 
 Clone onto your laptop:
 
@@ -32,11 +27,19 @@ Clone onto your laptop:
 
 Install [rcm](https://github.com/thoughtbot/rcm):
 
-    brew install rcm
+    sudo apt install rcm
 
 Install the dotfiles:
 
     env RCRC=$HOME/.dotfiles/rcrc rcup
+
+Install tailscale
+
+    curl -fsSL https://tailscale.com/install.sh | sh
+
+Join the VPN
+
+    sudo tailscale up
 
 
 What's in it?
