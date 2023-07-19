@@ -1,5 +1,20 @@
 Justin's dotfiles
 ===================
+Hello future Justin! If you're here, it means you're configuring a new box. Nice! Past Justin is jealous of you :)
+
+Quickstart
+------------
+
+Update packages
+
+    sudo apt update
+
+Upgrade packages
+
+    sudo apt upgrade -y     # get coffee here
+
+
+
 
 Requirements
 ------------
